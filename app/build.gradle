@@ -18,6 +18,8 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly files('libs_provided/android.jar')
+    // implementation fileTree(dir: 'libs', include: ['*.jar'])
     // compile 'com.android.support:appcompat-v7:27.1.1'
+    // compile 'com.anggrayudi:android-hidden-api:0.0.7'
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="net.tarks.craftingmod.chuno">
-    <overlay android:targetPackage="com.sec.imsservice"
-        android:priority="2" />
-    <!-- need grant by shell (or su..)-->
+package="net.tarks.craftingmod.chuno">
+<!--<overlay android:targetPackage="com.sec.imsservice"
+        android:priority="2" />-->
+<!-- need grant by shell (or su..)-->
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
 
     <application
@@ -14,6 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Internal_AppTheme">
         <activity android:name=".MainActivity">
+           <intent-filter>
+               <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
+               <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Hidden"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

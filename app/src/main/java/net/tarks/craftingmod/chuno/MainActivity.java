@@ -33,7 +33,9 @@ import java.util.Arrays;
 
 
 public class MainActivity extends Activity {
+    private static final String version = "1.2";
     private static final String ICON_BLACKLIST = "icon_blacklist";
+    private static final String ICON_BLACKLIST_BACKUP = "icon_blacklist_backup";
     private static final String HOME_CARRIER = "slimindicator_home_carrier";
     private static final String LOCK_CARRIER = "slimindicator_lock_carrier";
     private static final String VOLTE = "ims_volte";
@@ -49,7 +51,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final String url = "https://github.com/craftingmod/Chuno/blob/master/README.md";
+        final String url = "https://github.com/craftingmod/Chuno/blob/v" + version + "/README.md";
         cr = this.getContentResolver();
         context = this;
         /**
@@ -151,7 +153,11 @@ public class MainActivity extends Activity {
                     }
                 }
             }
-            Settings.Secure.putString(cr,ICON_BLACKLIST, TextUtils.join(",", blacks.toArray()));
+            final String join = TextUtils.join(",", blacks.toArray());
+            Settings.Secure.putString(cr,ICON_BLACKLIST, join);
+            if(Settings.Global.getString(cr,ICON_BLACKLIST_BACKUP) != null) {
+                Settings.Global.putString(cr,ICON_BLACKLIST_BACKUP, join);
+            }
         }
     }
 }

@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.tarks.craftingmod.chuno">
-    <!--
-    <overlay android:targetPackage="com.android.systemui"
-        android:priority="2" />
-        -->
     <overlay android:targetPackage="com.sec.imsservice"
         android:priority="2" />
+    <!-- need grant by shell (or su..)-->
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
 
     <application
         android:allowBackup="true"

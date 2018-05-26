@@ -10,7 +10,7 @@
 
 ### 적용
 0. **컴퓨터**를 준비해주세요.
-1. [App](https://github.com/craftingmod/Chuno/releases/download/v1.2/chuno.apk.zip)을 설치해주세요.
+1. [App](https://github.com/craftingmod/Chuno/releases/download/v1.3/chuno.apk.zip)을 설치해주세요.
 2. [ADB](http://bbshinny.tistory.com/180)를 설정해주세요.
 3. [빌드](https://github.com/craftingmod/Chuno/releases/download/v1.1/pc.zip)를 다운받아서 풀어주세요.
 4. 빌드 안의 enable.bat을 실행시켜 주세요.

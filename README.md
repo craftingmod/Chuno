@@ -1,4 +1,4 @@
-###이것은 무엇인가
+### 이것은 무엇인가
 
 - 검수는 쓸데없이 엄청 느리게 하면서 유저에게 절~대로 자율성을 부여하지 않는 **통신사**의 추노마크와 HD Voice(VOLTE) 마크를 없애줍니다.
 - 추노마크 제거에는 Settings.Secure 설정 수정을 이용하고 HD Voice 마크제거는 설정이 없으므로 Runtime Resource Overlay(RRO)를 사용합니다.

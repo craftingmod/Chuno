@@ -4,9 +4,9 @@
     <drawable name="stat_notify_operator_logo_skt">@drawable/blank</drawable>
     <drawable name="stat_notify_operator_logo_kt">@drawable/blank</drawable>
     <drawable name="stat_notify_operator_logo_lgt">@drawable/blank</drawable>
-    <!-- imsservice -->
+    <!-- imsservice
     <drawable name="stat_sys_phone_call_skt">@drawable/blank</drawable>
     <drawable name="stat_sys_phone_call_kt">@drawable/blank</drawable>
     <drawable name="stat_sys_phone_call_lgt">@drawable/blank</drawable>
-    <drawable name="stat_sys_phone_call">@drawable/blank</drawable>
+    <drawable name="stat_sys_phone_call">@drawable/blank</drawable> -->
 </resources>

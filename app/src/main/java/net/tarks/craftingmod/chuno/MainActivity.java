@@ -33,12 +33,12 @@ import java.util.Arrays;
 
 
 public class MainActivity extends Activity {
-    private static final String version = "1.2";
-    private static final String ICON_BLACKLIST = "icon_blacklist";
-    private static final String ICON_BLACKLIST_BACKUP = "icon_blacklist_backup";
-    private static final String HOME_CARRIER = "slimindicator_home_carrier";
-    private static final String LOCK_CARRIER = "slimindicator_lock_carrier";
-    private static final String VOLTE = "ims_volte";
+    private static final String version = "1.3";
+    public static final String ICON_BLACKLIST = "icon_blacklist";
+    public static final String ICON_BLACKLIST_BACKUP = "icon_blacklist_backup";
+    public static final String HOME_CARRIER = "slimindicator_home_carrier";
+    public static final String LOCK_CARRIER = "slimindicator_lock_carrier";
+    public static final String VOLTE = "ims_volte";
     private Switch cs;
     private Switch volte;
     private Switch hide;

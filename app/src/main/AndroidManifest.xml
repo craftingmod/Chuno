@@ -27,5 +27,16 @@ package="net.tarks.craftingmod.chuno">
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name=".TunerFallbackService"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver android:name=".ShutdownReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <action android:name="android.intent.action.REBOOT" />
+                <action android:name="android.intent.action.QUICKBOOT_POWEROFF" />
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>

@@ -5,6 +5,7 @@ package="net.tarks.craftingmod.chuno">
         android:priority="2" />-->
 <!-- need grant by shell (or su..)-->
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <application
         android:allowBackup="true"

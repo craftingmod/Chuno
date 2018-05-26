@@ -105,7 +105,7 @@ public class MainActivity extends Activity {
          * Hide app
          */
         pm = getPackageManager();
-        cname = new ComponentName(this, MainActivity.class);
+        cname = new ComponentName(this, Hidden.class);
         final boolean hided = pm.getComponentEnabledSetting(cname) >= PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
         hide = findViewById(R.id.switch_hide);
         hide.setChecked(hided);

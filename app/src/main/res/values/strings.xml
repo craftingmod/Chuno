@@ -7,4 +7,5 @@
     <string name="it_chuno_hdv">VoLTE mark</string>
     <string name="it_chuno_reboot">Reboot plz</string>
     <string name="it_chuno_pc">Watch: $url</string>
+    <string name="it_chuno_hide">Hide app from launcher</string>
 </resources>

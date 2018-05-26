@@ -9,10 +9,11 @@
 
 ### 적용
 0. **컴퓨터**를 준비해주세요.
-1. [ADB](http://bbshinny.tistory.com/180)를 설정해주세요.
-2. [App](https://github.com/craftingmod/Chuno/files/2041585/chuno.apk.zip)을 설치해주세요.
-3. [빌드](https://github.com/craftingmod/Chuno/files/2041584/pc_shell.zip)를 다운받아서 풀어주세요.
-4. 빌드 안의 enable.bat을 실행시켜 주세요.
-5. 재부팅하여 HDVoice 마크가 사라졌는지 확인해주세요.
-6. 추노 앱을 키고 추노마크를 끄고 재부팅해주세요.
-7. 끝~
+1. [App](https://github.com/craftingmod/Chuno/files/2041585/chuno.apk.zip)을 설치해주세요.
+2. **폰을 한번 재부팅** 해주세요.
+3. [ADB](http://bbshinny.tistory.com/180)를 설정해주세요.
+4. [빌드](https://github.com/craftingmod/Chuno/files/2041584/pc_shell.zip)를 다운받아서 풀어주세요.
+5. 빌드 안의 enable.bat을 실행시켜 주세요.
+6. 재부팅하여 HDVoice 마크가 사라졌는지 확인해주세요.
+7. 추노 앱을 키고 추노마크를 끄고 재부팅해주세요.
+8. 끝~

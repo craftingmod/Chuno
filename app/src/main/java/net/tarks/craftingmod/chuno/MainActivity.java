@@ -21,8 +21,10 @@ import android.text.Spannable;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -50,7 +52,7 @@ public class MainActivity extends Activity {
         if(!granted_write) {
             new AlertDialog.Builder(this)
                     .setTitle(getString(R.string.it_chuno_nopermTitle))
-                    .setMessage(getTextWithURL(getString(R.string.it_chuno_nopermContent),url))
+                    .setMessage(getString(R.string.it_chuno_nopermContent))
                     .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
@@ -110,6 +112,17 @@ public class MainActivity extends Activity {
         volte.setEnabled(omsAval);
         volte.setClickable(false);
         volte.setChecked(applied);
+        /**
+         * guide
+         */
+        final TextView guide = findViewById(R.id.guide);
+        guide.setText(getTextWithURL(getString(R.string.it_chuno_pc),url));
+        guide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+            }
+        });
     }
     @SuppressWarnings("deprecation")
     private Spanned getTextWithURL(String text, String url){

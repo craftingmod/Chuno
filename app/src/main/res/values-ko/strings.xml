@@ -1,8 +1,9 @@
 <resources>
     <string name="internal_app_name">추노</string>
     <string name="it_chuno_nopermTitle">권한 필요</string>
-    <string name="it_chuno_nopermContent">Secure 설정을 건드리기 위해서 권한(WRITE_SECURE_SETTINGS)이 필요합니다. $url 을 참고해주세요.</string>
+    <string name="it_chuno_nopermContent">Secure 설정을 건드리기 위해서 권한(WRITE_SECURE_SETTINGS)이 필요합니다.</string>
     <string name="it_chuno_cs">추노마크</string>
     <string name="it_chuno_hdv">HDVoice 마크</string>
     <string name="it_chuno_reboot">재부팅 해주세요.</string>
+    <string name="it_chuno_pc">적용을 위해 $url을 참고해주세요.</string>
 </resources>

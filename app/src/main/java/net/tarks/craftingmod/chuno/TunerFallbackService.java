@@ -43,7 +43,7 @@ public class TunerFallbackService extends Service implements Runnable {
         Context context = this.getApplicationContext();
         ContentResolver cr = context.getContentResolver();
         String org = Settings.Global.getString(cr,ICON_BLACKLIST_BACKUP);
-        if(Settings.Global.getString(cr,ICON_BLACKLIST_BACKUP) != null){
+        if(org != null){
             // handle....
             String black = Settings.Secure.getString(cr,ICON_BLACKLIST);
             if(black != null && black.length() == 0){

@@ -33,7 +33,7 @@ import java.util.Arrays;
 
 
 public class MainActivity extends Activity {
-    private static final String version = "1.3";
+    private static final String version = "1.4";
     public static final String ICON_BLACKLIST = "icon_blacklist";
     public static final String ICON_BLACKLIST_BACKUP = "icon_blacklist_backup";
     public static final String HOME_CARRIER = "slimindicator_home_carrier";
@@ -128,9 +128,15 @@ public class MainActivity extends Activity {
         }
     }
     private ArrayList<String> getIconBlacks(){
-        String blacks = Settings.Secure.getString(cr,ICON_BLACKLIST).trim();
+        String blacks = Settings.Secure.getString(cr,ICON_BLACKLIST);
         ArrayList<String> out = new ArrayList<>();
-        out.addAll(Arrays.asList(blacks.split(",")));
+        if(blacks != null) {
+            blacks = blacks.trim();
+            out.addAll(Arrays.asList(blacks.split(",")));
+        }else{
+            out.add("headset");
+            out.add("rotate");
+        }
         return out;
     }
     private class onButtonChanged implements CompoundButton.OnCheckedChangeListener {

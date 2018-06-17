@@ -7,4 +7,5 @@
     <string name="it_chuno_reboot">재부팅 해주세요.</string>
     <string name="it_chuno_pc">적용을 위해 $url을 참고해주세요.</string>
     <string name="it_chuno_hide">앱 숨기기</string>
+    <string name="it_chuno_goodlock">굿락 설정 열기</string>
 </resources>

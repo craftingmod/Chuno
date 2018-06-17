@@ -18,6 +18,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/mongwall"/>
+    <Button
+        android:text="@string/it_chuno_goodlock"
+        android:visibility="gone"
+        android:id="@+id/btn_goodlook"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
     <Switch
         android:layout_marginTop="10dp"
         android:paddingTop="10dp"

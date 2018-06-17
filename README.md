@@ -1,7 +1,7 @@
 # 추노
 - **Samsung Experience** 전용 추노 마크 제거기
 - 갤럭시 S9+ KT 모델에서 테스트함.
-- 1.4
+- 1.5
 
 ### 이것은 무엇인가
 
@@ -10,10 +10,15 @@
 
 ### 적용
 0. **컴퓨터**를 준비해주세요.
-1. [App](https://github.com/craftingmod/Chuno/releases/download/v1.4/chuno.apk.zip)을 설치해주세요.
+1. [App](https://github.com/craftingmod/Chuno/releases/download/v1.5/chuno.apk.zip)을 설치해주세요.
 2. [ADB](http://bbshinny.tistory.com/180)를 설정해주세요.
-3. [빌드](https://github.com/craftingmod/Chuno/releases/download/v1.1/pc.zip)를 다운받아서 풀어주세요.
+3. [빌드](https://github.com/craftingmod/Chuno/releases/download/v1.5/pc.zip)를 다운받아서 풀어주세요.
 4. 빌드 안의 enable.bat을 실행시켜 주세요.
 5. App에서 설정을 해주세요.
 6. 재부팅하여 추노 마크가 사라졌는지 확인해주세요.
 7. 끝~
+
+### 무음카메라
+1. 위 적용의 0~3까지를 해주세요.
+2. 빌드 안의 silence_camera_enable.bat을 실행시켜 주세요.
+3. 끝~

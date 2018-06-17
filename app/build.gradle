@@ -6,8 +6,8 @@ android {
         applicationId "net.tarks.craftingmod.chuno"
         minSdkVersion 24
         targetSdkVersion 27
-        versionCode 3
-        versionName "1.4"
+        versionCode 4
+        versionName "1.5"
     }
     buildTypes {
         release {

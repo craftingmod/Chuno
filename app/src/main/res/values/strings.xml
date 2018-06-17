@@ -8,4 +8,5 @@
     <string name="it_chuno_reboot">Reboot plz</string>
     <string name="it_chuno_pc">Watch: $url</string>
     <string name="it_chuno_hide">Hide app from launcher</string>
+    <string name="it_chuno_goodlock">Open Goodlock setting</string>
 </resources>

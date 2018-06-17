@@ -7,22 +7,16 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.om.IOverlayManager;
-import android.content.om.OverlayInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageManagerInternal;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.RemoteException;
-import android.os.ServiceManager;
 import android.provider.Settings;
 import android.text.Html;
-import android.text.Spannable;
 import android.text.Spanned;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -42,6 +36,7 @@ public class MainActivity extends Activity {
     private Switch cs;
     private Switch volte;
     private Switch hide;
+    private TextView guide;
     private ContentResolver cr;
     private Context context;
     private PackageManager pm;
@@ -50,15 +45,24 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.chuno);
         final String url = "https://github.com/craftingmod/Chuno/blob/v" + version + "/README.md";
         cr = this.getContentResolver();
         context = this;
         /**
+         * Good lock check
+         */
+        boolean goodlock = true;
+        try {
+            context.getPackageManager().getPackageInfo("com.samsung.android.qstuner", PackageManager.GET_ACTIVITIES);
+        }catch (PackageManager.NameNotFoundException e) {
+            goodlock = false;
+        }
+        /**
          * Check secure settings perm
          */
         final boolean granted_write = this.checkCallingOrSelfPermission("android.permission.WRITE_SECURE_SETTINGS") == PackageManager.PERMISSION_GRANTED;
-        if(!granted_write) {
+        if(!granted_write && !goodlock) {
             new AlertDialog.Builder(this)
                     .setTitle(getString(R.string.it_chuno_nopermTitle))
                     .setMessage(getString(R.string.it_chuno_nopermContent))
@@ -92,10 +96,11 @@ public class MainActivity extends Activity {
         volte.setEnabled(granted_write);
         volte.setChecked(!blacks.contains(VOLTE));
         volte.setOnCheckedChangeListener(new onButtonChanged(VOLTE));
+
         /**
          * guide
          */
-        final TextView guide = findViewById(R.id.guide);
+        guide = findViewById(R.id.guide);
         guide.setText(getTextWithURL(getString(R.string.it_chuno_pc),url));
         guide.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,6 +108,27 @@ public class MainActivity extends Activity {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
             }
         });
+
+        /**
+         * Good Lock Button
+         */
+        if(goodlock) {
+            cs.setVisibility(View.GONE);
+            volte.setVisibility(View.GONE);
+            guide.setVisibility(View.GONE);
+            Button goodlock_link = findViewById(R.id.btn_goodlook);
+            goodlock_link.setVisibility(View.VISIBLE);
+            goodlock_link.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent();
+                    i.setComponent(new ComponentName("com.samsung.android.qstuner", "com.samsung.android.qstuner.slimindicator.SlimIndicatorActivity"));
+                    startActivity(i);
+                    // finish();
+                }
+            });
+        }
+
         /**
          * Hide app
          */
